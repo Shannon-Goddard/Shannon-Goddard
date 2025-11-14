@@ -4,14 +4,16 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 
 **Currently Shipping:**
 
-🌿 **GrowApp Cannabis Guide** – Complete cultivation ecosystem with 2,800+ strain database [Web Platform](https://growappcannabis.guide)     
-*Active development: strain search, nutrient guides, plant sizing tools*
-**GrowApp Live on the Stores**  
-[![App Store](https://img.shields.io/badge/App_Store-Download-black?logo=apple&logoColor=white)](https://apps.apple.com/us/app/growapp-cannabis-guide/id6471381461)  
-[![Google Play](https://img.shields.io/badge/Google_Play-Download-brightgreen?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.GrowAppCannabisGuide)    
+🌿 **GrowApp Cannabis Guide** – Complete cultivation ecosystem with 2,800+ strain database  
+📱 **Live on the stores**  
+[![Download on the App Store](https://img.shields.io/badge/App_Store-Download-black?logo=apple&logoColor=white)](https://apps.apple.com/us/app/growapp-cannabis-guide/id6471381461)  
+[![Get it on Google Play](https://img.shields.io/badge/Google_Play-Download-brightgreen?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.GrowAppCannabisGuide)  
+🌐 **Web Platform** – [growappcannabis.guide](https://growappcannabis.guide)  
+Active development: strain search • nutrient guides • plant sizing tools
+
 🎭 **Mission Mischief** – Social scavenger hunt where hashtags become blockchain proofs  
-🌐 [Live Demo](https://missionmischief.online) | [Repo](https://github.com/Shannon-Goddard/mission-mischief) | [Whitepaper](https://github.com/Shannon-Goddard/hashtag-blockchain-proof-of-concept)  
-*51 missions, zero wallets, pure chaos*
+🌐 [Live Demo](https://missionmischief.online) • [Repo](https://github.com/Shannon-Goddard/mission-mischief) • Whitepaper (Nov 2025)  
+51 missions • zero wallets • pure chaos
 
 **Previous Hits:**
 - 🧠 [Heisenberg Cannabis Trivia](https://apps.apple.com/us/app/heisenberg-cannabis-trivia/id1715197105?mt=8) – Quiz game, iOS/Android
