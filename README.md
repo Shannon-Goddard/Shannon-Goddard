@@ -12,7 +12,7 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 Active development: strain search • nutrient guides • plant sizing tools
 
 🎭 **Mission Mischief** – Social scavenger hunt where hashtags become blockchain proofs  
-🌐 [Live Demo](https://missionmischief.online) • [Repo](https://github.com/Shannon-Goddard/mission-mischief) • Whitepaper (Nov 2025)  
+🌐 [Live Demo](https://missionmischief.online) • [Repo](https://github.com/Shannon-Goddard/mission-mischief) • [Whitepaper](https://github.com/Shannon-Goddard/hashtag-blockchain-proof-of-concept)  
 51 missions • zero wallets • pure chaos
 
 **Previous Hits:**
