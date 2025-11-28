@@ -1,5 +1,4 @@
 ![Hero Banner](img/footer.png)
-
 ### Yo, I'm Shannon 
 
 Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. From cannabis cultivation tools to blockchain experiments—I build weird stuff that works.
