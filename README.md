@@ -19,11 +19,11 @@ strain search • nutrient guides • plant sizing tools
 51 missions • zero wallets • pure chaos
 
 
-**Previous Hits:**
-- [Heisenberg Cannabis Trivia](https://apps.apple.com/us/app/heisenberg-cannabis-trivia/id1715197105?mt=8) – Quiz game, iOS/Android
-- [Slots of Bud](https://play.google.com/store/apps/details?id=com.Loyal9.SlotsOfBud) – Cannabis-themed slot machine
-- [Name That Strain](https://play.google.com/store/apps/details?id=com.Loyal9.NameThatStrain) – Strain guessing game
-- Plus: [No Fish!](https://apps.apple.com/us/app/no-fish/id1715197105?mt=8), [Short-Term Mem-uh...](https://play.google.com/store/apps/details?id=com.Loyal9.ShortTermMemuh), [Go Toke!](https://play.google.com/store/apps/details?id=com.Loyal9.GoToke)
+**Previous Hits: iOS/Android**
+- Heisenberg - Cannabis trivia game
+- Slots of Bud – Cannabis-themed slot machine game
+- Name That Strain – Strain guessing game
+- Plus: No Fish!, Short-Term, Go Toke!
 
 ## 🎯 Professional Background:
 **19 years operational leadership @ Food 4 Less** (Manager → District Trainer)
