@@ -1,4 +1,4 @@
-![Hero Banner](img/header.jpg)
+![Hero Banner](img/footer.png)
 
 ### Yo, I'm Shannon 
 
@@ -26,7 +26,6 @@ strain search • nutrient guides • plant sizing tools
 - [Name That Strain](https://play.google.com/store/apps/details?id=com.Loyal9.NameThatStrain) – Strain guessing game
 - Plus: [No Fish!](https://apps.apple.com/us/app/no-fish/id1715197105?mt=8), [Short-Term Mem-uh...](https://play.google.com/store/apps/details?id=com.Loyal9.ShortTermMemuh), [Go Toke!](https://play.google.com/store/apps/details?id=com.Loyal9.GoToke)
 
-![Footer](img/footer.png)
 ## 🎯 Professional Background:
 **19 years operational leadership @ Food 4 Less** (Manager → District Trainer)
 • P&L management • Team scaling • Resource optimization  
