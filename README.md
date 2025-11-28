@@ -46,5 +46,5 @@ strain search • nutrient guides • plant sizing tools
 📧 [shannon@loyal9.app](mailto:shannon@loyal9.app) | Let's build something epic
 
 **Fund the chaos**  
-[![Support my work](https://img.shields.io/badge/PayPal-Support-blue?logo=paypal)]("https://www.paypal.com/ncp/payment/SPULE53SCDNHW")
+[![Support my work](https://img.shields.io/badge/PayPal-Support-blue?logo=paypal)](https://www.paypal.com/ncp/payment/SPULE53SCDNHW)
 ![Hero Banner](img/footer.png)
