@@ -20,9 +20,9 @@ strain search • nutrient guides • plant sizing tools
 
 
 **Previous Hits:**
-- [Heisenberg Cannabis Trivia](https://apps.apple.com/us/app/heisenberg-cannabis-trivia/id1715197105)
-- [Slots of Bud](https://play.google.com/store/apps/details?id=com.Loyal9.SlotsOfBud)
-- [Name That Strain](https://play.google.com/store/apps/details?id=com.Loyal9.NameThatStrain)
+- [Heisenberg Cannabis Trivia](https://play.google.com/store/apps/details?id=com.heinsenberg&hl=en_US)
+- [Slots of Bud](https://play.google.com/store/apps/details?id=com.slotsofbud&hl=en_US)
+- [Name That Strain](https://play.google.com/store/apps/details?id=com.namethatstrain&hl=en_US)
 - Plus the chaos classics: No Fish!, Short-Term Mem-uh…, Go Toke!
 
 ## 🎯 Professional Background:
