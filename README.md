@@ -8,8 +8,8 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 **Currently Shipping:**
 
 🌿 **GrowApp Cannabis Guide** – Complete cultivation ecosystem with 2,800+ strain database  
-[![Download on the App Store](https://img.shields.io/badge/App_Store-Download-0088cc?logo=apple&logoColor=white)](https://apps.apple.com/us/app/growapp-cannabis-guide/id6471381461)
-[![Get it on Google Play](https://img.shields.io/badge/Google_Play-Download-FBBC04?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.GrowAppCannabisGuide) 
+[![Download on the App Store](https://img.shields.io/badge/App_Store-Download-0088cc?logo=apple&logoColor=white)](https://apps.apple.com/us/app/growapp-cannabis-app/id6751991099)
+[![Get it on Google Play](https://img.shields.io/badge/Google_Play-Download-FBBC04?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.growappcannabiscannabis.guide&hl=en_US) 
 [![Visit the website](https://img.shields.io/badge/Web_Platform-Visit-04AA6D)](https://growappcannabis.guide)  
 strain search • nutrient guides • plant sizing tools
 
