@@ -1,3 +1,5 @@
+![Hero Banner](img/footer.png)
+
 ### Yo, I'm Shannon 👋
 
 Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. From cannabis cultivation tools to blockchain experiments—I build weird stuff that works.
@@ -40,5 +42,9 @@ Active development: strain search • nutrient guides • plant sizing tools
 **Data Analytics:** UC Berkeley certified | Web scraping with BeautifulSoup
 
 **Status:** Open to remote/contract work (chaos preferred) | All projects open-source
-
 📧 shannon@loyal9.app | Let's build something awesome
+
+**🍺 Fund the chaos (beer money appreciated)**  
+[![Support my work](https://img.shields.io/badge/PayPal-Support-blue?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=F6B28PEJFF8YG)
+
+![Hero Banner](img/header.jpg)
