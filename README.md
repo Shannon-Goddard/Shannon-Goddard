@@ -19,11 +19,11 @@ strain search • nutrient guides • plant sizing tools
 51 missions • zero wallets • pure chaos
 
 
-**Previous Hits: iOS/Android**
-- Heisenberg - Cannabis trivia game
-- Slots of Bud – Cannabis-themed slot machine game
-- Name That Strain – Strain guessing game
-- Plus: No Fish!, Short-Term, Go Toke!
+**Previous Hits:**
+- [Heisenberg Cannabis Trivia](https://apps.apple.com/us/app/heisenberg-cannabis-trivia/id1715197105)
+- [Slots of Bud](https://play.google.com/store/apps/details?id=com.Loyal9.SlotsOfBud)
+- [Name That Strain](https://play.google.com/store/apps/details?id=com.Loyal9.NameThatStrain)
+- Plus the chaos classics: No Fish!, Short-Term Mem-uh…, Go Toke!
 
 ## 🎯 Professional Background:
 **19 years operational leadership @ Food 4 Less** (Manager → District Trainer)
@@ -47,3 +47,4 @@ strain search • nutrient guides • plant sizing tools
 
 **Fund the chaos**  
 [![Support my work](https://img.shields.io/badge/PayPal-Support-blue?logo=paypal)]("https://www.paypal.com/ncp/payment/SPULE53SCDNHW")
+![Hero Banner](img/footer.png)
