@@ -43,7 +43,7 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 
 ## 🎯 Track Record
 
-**📱 Apps:** 8 published games + 6 more cannabis-themed apps with legacy user base  
+**📱 Apps:** 1 app + 5 published games + GrowApp website with 35,000+ legacy user base  
 **🏢 Operations:** 19 years leadership @ Food 4 Less (Manager → District Trainer)
 
 ---
