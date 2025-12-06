@@ -71,7 +71,7 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat&logo=aws-lambda&logoColor=white)
-![CSS](https://img.shields.io/badge/TailwindCSS-blue.svg?style=flat&logo=tailwindcss)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwind-css&logoColor=white) 
 ![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat&logo=dynamodb)
 ![Data Science](https://img.shields.io/badge/Data_Science-green?style=flat&logo=data_science)  
 **🔬 Research-Driven:** Stubborn problem solver who researches until I find the right way (not the easy way)  
@@ -94,7 +94,7 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 **Status:** Open to remote/contract work (chaos preferred)
 
 [![gmail](https://img.shields.io/badge/gmail-Contact-red?logo=gmail&logoColor=white)](mailto:shannon@loyal9.app) 
-[![linkedin](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shannon-goddard/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shannon-goddard/) 
 
 ---
 
