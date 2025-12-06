@@ -1,16 +1,14 @@
-![Hero Banner](img/footer.png)
+![Hero Banner](img/hero.png)
 
 ### Yo, I'm Shannon 👋
 
 Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. From cannabis cultivation tools to blockchain experiments—I build weird stuff that works.
 
-🎓 **UC Berkeley Data Analytics Bootcamp** | **Cerritos College Retail Management**
-
 ---
 
-## 🚀 Currently Shipping
+# Currently Shipping
 
-### 🌿 GrowApp Cannabis Guide
+### 🌿 GrowApp | Cannabis App
 **Personalized daily cultivation guidance based on YOUR strain, lighting & nutrients**
 
 [![Download on the App Store](https://img.shields.io/badge/App_Store-Download-0088cc?logo=apple&logoColor=white)](https://apps.apple.com/us/app/growapp-cannabis-guide/id6751991099)
@@ -18,50 +16,64 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 [![Visit the website](https://img.shields.io/badge/Web_Platform-Visit-04AA6D)](https://growappcannabis.guide)
 
 **📊 Traction:** 7,000+ users in 3 months • 2,800+ strain database • 1,300+ YouTube subscribers • 142K+ video views  
-**💬 Community:** *"Best and most useful video"* - user feedback • 35,000+ users (previous version)
+**💬 Community:** *"Best and most useful video"* - user feedback • loyal9.app website with 35,000+ users (previous version)  
 
-### 🎭 Mission Mischief
+**GrowApp Social Media Presence:**  
+[![facebook](https://img.shields.io/badge/Facebook-grey?logo=facebook&logoColor=1877F2)](https://www.facebook.com/Loyal9GrowApp/)
+[![instagram](https://img.shields.io/badge/Instagram-grey?logo=instagram&logoColor=ee2a7b)](https://www.instagram.com/loyal9growapp/)
+[![x](https://img.shields.io/badge/X-grey?logo=x&logoColor=000000)](https://x.com/Loyal9App)
+[![youtube](https://img.shields.io/badge/YouTube-grey?logo=youtube&logoColor=ff0000)](https://www.youtube.com/@GrowApp-Cannabisguide)
+
+---
+
+### 🎭 Mission Mischief 
 **Social scavenger hunt where hashtags become blockchain proofs**
 
-[![Repo](https://img.shields.io/badge/github-repo-black?logo=github)](https://github.com/Shannon-Goddard/mission-mischief)
-[![Whitepaper](https://img.shields.io/badge/Research-Academic_Whitepaper-blue?logo=github)](https://github.com/Shannon-Goddard/hashtag-blockchain-proof-of-concept)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17620402-blue)](https://doi.org/10.5281/zenodo.17620402)
+[![Repo](https://img.shields.io/badge/Repo-grey?logo=github&logoColor=000)](https://github.com/Shannon-Goddard/mission-mischief)
+[![Whitepaper](https://img.shields.io/badge/Whitepaper-grey?logo=github&logoColor=000000)](https://github.com/Shannon-Goddard/hashtag-blockchain-proof-of-concept)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17620402-35ea97)](https://doi.org/10.5281/zenodo.17620402)
 
 **🔬 Research:** First implementation of social media as distributed ledger • 99% accuracy with community consensus  
 **📊 Results:** 1,000+ verified transactions • 95% cost reduction vs traditional blockchain  
 **🎲 Status:** 51 missions • zero wallets • pure chaos • *launching soon*
 
-### 🧠 Cannabis Intelligence Database
+**Mission Mischief Social Media Presence:**  
+[![facebook](https://img.shields.io/badge/Facebook-grey?logo=facebook&logoColor=1877F2)](https://www.facebook.com/mission.mischief/)
+[![instagram](https://img.shields.io/badge/Instagram-grey?logo=instagram&logoColor=ee2a7b)](https://www.instagram.com/missionmischief_official/)
+[![x](https://img.shields.io/badge/X-grey?logo=x&logoColor=000000)](https://x.com/Missio_Mischief)
+
+---
+
+### 🌱 Cannabis Intelligence Database
+
 **World's largest cannabis genetics repository with AI extraction**
 
-[![Live API](https://img.shields.io/badge/API-LIVE-brightgreen)](https://api.loyal9.app)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17645958-blue)](https://doi.org/10.5281/zenodo.17645958)
+[![Live API](https://img.shields.io/badge/API-LIVE-FF9900)](https://api.loyal9.app)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17645958-35ea97)](https://doi.org/10.5281/zenodo.17645958)
 
 **📈 Scale:** 15,740+ strains • 8,792 AI-extracted data points • Production API deployed
 
 ---
 
-## 🎯 Track Record
+# Track Record
 
-**📱 Apps:** 1 app + 5 published games + GrowApp website with 35,000+ legacy user base  
+**📱 Apps:** GrowApp (current) + Mission Mischief (launching) + Cannabis DB (live API)   
 **🏢 Operations:** 19 years leadership @ Food 4 Less (Manager → District Trainer)
 
 ---
+# Approach & Skills
 
-## 🛠️ Tech Stack
+![UC Berkeley](https://img.shields.io/badge/UC_Berkeley-Data_Analytics_Bootcamp-FDB515 )
+![Cerritos College](https://img.shields.io/badge/Cerritos_College-Retail_Management-002E66)
+
+**Specialties:** Data Analytics • Web scraping • Mobile development • AWS serverless  
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat&logo=aws-lambda&logoColor=white)
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat&logo=react&logoColor=61DAFB)
-![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat&logo=amazon-dynamodb&logoColor=white)
-
-**Specialties:** Data Analytics • Web scraping • Mobile development • AWS serverless
-
----
-
-## 💼 What I Do
-
+![CSS](https://img.shields.io/badge/TailwindCSS-blue.svg?style=flat&logo=tailwindcss)
+![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat&logo=dynamodb)
+![Data Science](https://img.shields.io/badge/Data_Science-green?style=flat&logo=data_science)  
 **🔬 Research-Driven:** Stubborn problem solver who researches until I find the right way (not the easy way)  
 **🛠️ Resource Utilization:** Leverage existing tools and platforms creatively to build what I envision  
 **📊 Data-First:** UC Berkeley certified • Turn messy data into production systems  
@@ -69,7 +81,7 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 
 ---
 
-## 🔮 What's Next
+# What's Next
 
 **🚀 2026 Vision:** AI-powered cultivation platform that makes all current grow apps obsolete  
 **💡 Approach:** Comprehensive equipment database + AI + personalized guidance  
@@ -77,33 +89,16 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 
 ---
 
-## 📞 Let's Connect
+# Join The Chaos
 
-**📧 Email:** [shannon@loyal9.app](mailto:shannon@loyal9.app)  
-**💼 Status:** Open to remote/contract work (chaos preferred)  
-**🔓 Code:** All projects open-source
+**Status:** Open to remote/contract work (chaos preferred)
 
 [![gmail](https://img.shields.io/badge/gmail-Contact-red?logo=gmail&logoColor=white)](mailto:shannon@loyal9.app) 
 [![linkedin](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shannon-goddard/)
 
 ---
 
-## 🌐 Project Socials
-
-**GrowApp:**  
-[![facebook](https://img.shields.io/badge/Facebook-Follow-blue?logo=facebook&logoColor=white)](https://www.facebook.com/Loyal9GrowApp/)
-[![instagram](https://img.shields.io/badge/Instagram-Follow-purple?logo=instagram&logoColor=white)](https://www.instagram.com/loyal9growapp/)
-[![x](https://img.shields.io/badge/X-Follow-black?logo=x&logoColor=white)](https://x.com/Loyal9App)
-[![youtube](https://img.shields.io/badge/YouTube-Subscribe-red?logo=youtube&logoColor=white)](https://www.youtube.com/@GrowApp-Cannabisguide)
-
-**Mission Mischief:**  
-[![facebook](https://img.shields.io/badge/Facebook-Follow-blue?logo=facebook&logoColor=white)](https://www.facebook.com/mission.mischief/)
-[![instagram](https://img.shields.io/badge/Instagram-Follow-purple?logo=instagram&logoColor=white)](https://www.instagram.com/missionmischief_official/)
-[![x](https://img.shields.io/badge/X-Follow-black?logo=x&logoColor=white)](https://x.com/Missio_Mischief)
-
----
-
-**🍺 Fund the chaos**  
+**Fund the chaos**  
 [![Support my work](https://img.shields.io/badge/PayPal-Support-blue?logo=paypal)](https://www.paypal.com/ncp/payment/SPULE53SCDNHW)
 
-![Footer](img/footer.png)
+![Footer](img/hero.png)
