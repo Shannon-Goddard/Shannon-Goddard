@@ -24,7 +24,7 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 [![x](https://img.shields.io/badge/X-grey?logo=x&logoColor=000000)](https://x.com/Loyal9App)
 [![youtube](https://img.shields.io/badge/YouTube-grey?logo=youtube&logoColor=ff0000)](https://www.youtube.com/@GrowApp-Cannabisguide)
 
----
+#
 
 ### 🎭 Mission Mischief 
 **Social scavenger hunt where hashtags become blockchain proofs**
@@ -42,7 +42,7 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 [![instagram](https://img.shields.io/badge/Instagram-grey?logo=instagram&logoColor=ee2a7b)](https://www.instagram.com/missionmischief_official/)
 [![x](https://img.shields.io/badge/X-grey?logo=x&logoColor=000000)](https://x.com/Missio_Mischief)
 
----
+#
 
 ### 🌱 Cannabis Intelligence Database
 
@@ -62,18 +62,17 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 
 ---
 # Approach & Skills
-
-![UC Berkeley](https://img.shields.io/badge/UC_Berkeley-Data_Analytics_Bootcamp-FDB515 )
-![Cerritos College](https://img.shields.io/badge/Cerritos_College-Retail_Management-002E66)
-
-**Specialties:** Data Analytics • Web scraping • Mobile development • AWS serverless  
-
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat&logo=aws-lambda&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwind-css&logoColor=white) 
 ![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat&logo=dynamodb)
-![Data Science](https://img.shields.io/badge/Data_Science-green?style=flat&logo=data_science)  
+![Data Science](https://img.shields.io/badge/Data_Science-green?style=flat&logo=data_science) 
+
+**Specialties:** Data Analytics • Web scraping • Mobile development • AWS serverless  
+![UC Berkeley](https://img.shields.io/badge/UC_Berkeley-Data_Analytics_Bootcamp-FDB515 )
+![Cerritos College](https://img.shields.io/badge/Cerritos_College-Retail_Management-002E66)  
+
 **🔬 Research-Driven:** Stubborn problem solver who researches until I find the right way (not the easy way)  
 **🛠️ Resource Utilization:** Leverage existing tools and platforms creatively to build what I envision  
 **📊 Data-First:** UC Berkeley certified • Turn messy data into production systems  
@@ -96,7 +95,7 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 [![gmail](https://img.shields.io/badge/gmail-Contact-red?logo=gmail&logoColor=white)](mailto:shannon@loyal9.app) 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shannon-goddard/) 
 
----
+# 
 
 **Fund the chaos**  
 [![Support my work](https://img.shields.io/badge/PayPal-Support-blue?logo=paypal)](https://www.paypal.com/ncp/payment/SPULE53SCDNHW)
