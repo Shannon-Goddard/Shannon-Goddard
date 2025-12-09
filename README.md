@@ -97,7 +97,7 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 
 # 
 
-**Fund the chaos**  
+**Fund the chaos:** Be a part of something great... and most likely legal. 
 [![Support my work](https://img.shields.io/badge/PayPal-Support-blue?logo=paypal)](https://www.paypal.com/ncp/payment/SPULE53SCDNHW)
 
 ![Footer](img/hero.png)
