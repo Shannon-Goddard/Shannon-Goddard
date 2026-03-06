@@ -44,14 +44,17 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 
 #
 
-### 🌱 Cannabis Intelligence Database
+### 🌱 CI-Strains-Pro | Cannabis Intelligence
+**Surgical, HTML-verified global ledger for cannabis genetics & market intel**
 
-**World's largest cannabis genetics repository with AI extraction**
+[![GitHub Repo](https://img.shields.io/badge/GitHub-ci--strains--pro-181717?logo=github)](https://github.com/Shannon-Goddard/ci-strains-pro)
+[![Live Verification](https://img.shields.io/badge/Verify_Strains-LIVE-04AA6D)](https://strains.loyal9.app)
+[![Enterprise Landing](https://img.shields.io/badge/Enterprise-pro.loyal9.app-FF9900)](https://pro.loyal9.app)
+[![DOI (Reserved)](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.RESERVED-35ea97)](https://pro.loyal9.app)
 
-[![Live API](https://img.shields.io/badge/API-LIVE-FF9900)](https://api.loyal9.app)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17645958-35ea97)](https://doi.org/10.5281/zenodo.17645958)
-
-**📈 Scale:** 15,740+ strains • 8,792 AI-extracted data points • Production API deployed
+**📈 Scale:** 21,220+ verified strains • 200+ validated columns • 21,706 immutable HTML archives • 100% identity verification • 76.1% lineage coverage  
+**🔬 Validation:** Gemini Flash 2.0 (91.8% success on S3 HTML) + 20+ hrs human triple-checks  
+**Philosophy:** No hallucinations, full traceability, "Ship what's clean. Mark what's not."
 
 ---
 
