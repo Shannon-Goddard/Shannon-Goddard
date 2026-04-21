@@ -9,240 +9,391 @@
     <meta property="og:description" content="Building the world's largest cannabis genetics repository and AI-powered cultivation tools.">
     <meta property="og:image" content="https://shannon-goddard.github.io/img/hero.png">
     <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root {
-            --bg: #0d1117;
-            --text: #c9d1d9;
-            --accent: #04AA6D;
-            --border: #30363d;
-            --card-bg: #161b22;
-        }
-        * { box-sizing: border-box; }
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-        }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .container { max-width: 800px; width: 100%; }
+        :root { --bg:#0d1117; --text:#c9d1d9; --accent:#04AA6D; --border:#30363d; --card-bg:#161b22; }
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.6;padding:2rem;display:flex;justify-content:center;}
+        a{color:var(--accent);text-decoration:none;}
+        a:hover{text-decoration:underline;}
+        .container{max-width:800px;width:100%;}
 
         /* Hero */
-        .hero { text-align: center; margin-bottom: 2rem; }
-        .hero img { max-width: 100%; border-radius: 8px; }
-        .hero h1 { color: var(--accent); margin: 1rem 0 0.25rem; font-size: 2rem; }
-        .hero .tagline { color: #8b949e; font-style: italic; margin: 0; }
+        .hero{text-align:center;margin-bottom:2rem;}
+        .hero img{max-width:100%;border-radius:8px;}
+        .hero h1{color:var(--accent);margin:1rem 0 .25rem;font-size:2rem;}
+        .hero .tagline{color:#8b949e;font-style:italic;}
 
-        /* Stats bar */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin: 1.5rem 0 2rem;
-            padding: 1rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-        }
-        .stat { text-align: center; }
-        .stat .num { color: var(--accent); font-size: 1.4rem; font-weight: 700; display: block; }
-        .stat .label { font-size: 0.75rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.05em; }
+        /* Stats */
+        .stats{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin:1.5rem 0 2rem;padding:1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:6px;}
+        .stat{text-align:center;}
+        .stat .num{color:var(--accent);font-size:1.4rem;font-weight:700;display:block;}
+        .stat .label{font-size:.75rem;color:#8b949e;text-transform:uppercase;letter-spacing:.05em;}
 
         /* Sections */
-        .section { margin-bottom: 2.5rem; }
-        h2 { border-left: 4px solid var(--accent); padding-left: 1rem; font-size: 1.25rem; }
+        .section{margin-bottom:2.5rem;}
+        h2{border-left:4px solid var(--accent);padding-left:1rem;font-size:1.25rem;margin-bottom:1.5rem;}
 
         /* Manifesto */
-        .manifesto {
-            background: rgba(88, 166, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 6px;
-            border: 1px dashed var(--accent);
-        }
+        .manifesto{background:rgba(88,166,255,.05);padding:1.5rem;border-radius:6px;border:1px dashed var(--accent);}
+        .manifesto p{margin-top:.75rem;}
 
-        /* Grid cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s;
-        }
-        .card:hover { transform: translateY(-5px); border-color: var(--accent); text-decoration: none; }
-        .card h3 { margin-top: 0; color: var(--accent); font-size: 1rem; }
-        .card .card-meta { font-size: 0.8rem; color: #8b949e; margin-top: 0.5rem; }
+        /* === PROJECT ROWS (breeder-row pattern) === */
+        .project-row{margin-bottom:1.5rem;border-radius:8px;overflow:hidden;transition:transform .2s,box-shadow .2s;cursor:pointer;}
+        .project-row:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.4);}
+        .project-bg{position:relative;width:100%;min-height:80px;background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#0a0a0a;border-radius:8px;overflow:hidden;}
+        .project-bg::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.88);z-index:1;}
+        .project-bg::after{content:"";position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to top,rgba(0,0,0,.9),transparent);z-index:1;}
 
-        /* Product badges */
-        .badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.75rem; }
-        .badges a {
-            display: inline-block;
-            padding: 0.3rem 0.7rem;
-            background: var(--accent);
-            color: white;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-        .badges a:hover { opacity: 0.85; text-decoration: none; }
+        /* Row header (always visible) */
+        .project-header{position:relative;z-index:2;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+        .project-header h3{color:#fff;font-size:1.1rem;margin:0;}
+        .project-header h3 i{margin-right:.5rem;color:var(--accent);}
+        .project-stat{color:var(--accent);font-size:.85rem;font-weight:600;white-space:nowrap;}
+        .expand-icon{color:#8b949e;font-size:.8rem;transition:transform .3s;}
+        .project-row.open .expand-icon{transform:rotate(180deg);}
+
+        /* Row detail (hidden by default) */
+        .project-detail{position:relative;z-index:2;padding:0 1.5rem 1.25rem;display:none;}
+        .project-row.open .project-detail{display:block;}
+        .project-detail p{color:#ccc;font-size:.9rem;margin-bottom:.75rem;line-height:1.6;}
+        .project-detail .meta{color:#8b949e;font-size:.8rem;margin-bottom:.75rem;}
+
+        /* Icon links */
+        .icon-links{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.5rem;}
+        .icon-links a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid var(--border);border-radius:50%;color:#fff;font-size:1rem;transition:all .2s;}
+        .icon-links a:hover{background:var(--accent);border-color:var(--accent);color:#fff;text-decoration:none;transform:scale(1.1);}
+        .icon-links a.has-label{width:auto;border-radius:20px;padding:0 .75rem;gap:.4rem;font-size:.8rem;font-weight:600;}
+
+        /* Status badges */
+        .badge-active{font-size:.6rem;background:var(--accent);color:#fff;padding:.15rem .5rem;border-radius:20px;vertical-align:middle;margin-left:.4rem;}
+        .badge-soon{font-size:.6rem;background:#f0ad4e;color:#000;padding:.15rem .5rem;border-radius:20px;vertical-align:middle;margin-left:.4rem;}
+        .badge-live{font-size:.6rem;background:#58a6ff;color:#000;padding:.15rem .5rem;border-radius:20px;vertical-align:middle;margin-left:.4rem;}
+
+        /* Category label */
+        .category-label{color:#8b949e;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;padding-left:.25rem;}
 
         /* Journey / book */
-        .book-link { float: right; margin-left: 1.5rem; }
+        .book-link{float:right;margin-left:1.5rem;}
+        .section ul{padding-left:1.25rem;}
+        .section li{margin-bottom:.5rem;}
 
         /* Contact */
-        .contact {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        .contact a {
-            padding: 0.5rem 1.2rem;
-            border: 1px solid var(--accent);
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-        .contact a:hover { background: var(--accent); color: white; text-decoration: none; }
+        .contact{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1rem;}
+        .contact a{padding:.5rem 1.2rem;border:1px solid var(--accent);border-radius:6px;font-weight:600;font-size:.9rem;transition:background .2s;}
+        .contact a:hover{background:var(--accent);color:#fff;text-decoration:none;}
+        footer{text-align:center;margin-top:3rem;color:#8b949e;font-size:.8rem;}
 
-        footer { text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.8rem; }
-
-        @media (max-width: 600px) {
-            body { padding: 1rem; }
-            .stats { gap: 1rem; }
-            .stat .num { font-size: 1.1rem; }
-            .book-link { float: none; margin: 0 auto 1rem; display: block; text-align: center; }
-            .hero h1 { font-size: 1.5rem; }
+        @media(max-width:600px){
+            body{padding:1rem;}
+            .hero h1{font-size:1.5rem;}
+            .stats{gap:1rem;}
+            .stat .num{font-size:1.1rem;}
+            .project-header{flex-wrap:wrap;gap:.5rem;}
+            .project-stat{font-size:.75rem;}
+            .book-link{float:none;margin:0 auto 1rem;display:block;text-align:center;}
         }
     </style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
 
-        <!-- Hero -->
-        <div class="hero">
-            <img src="img/hero.png" alt="Shannon Goddard">
-            <h1>Shannon Goddard</h1>
-            <p class="tagline">Founder @ Loyal9 · Full-stack developer shipping apps that actually get used</p>
-        </div>
-
-        <!-- Traction -->
-        <div class="stats">
-            <div class="stat"><span class="num">7,000+</span><span class="label">App Users</span></div>
-            <div class="stat"><span class="num">15,740+</span><span class="label">Strains Cataloged</span></div>
-            <div class="stat"><span class="num">142K+</span><span class="label">Video Views</span></div>
-            <div class="stat"><span class="num">19</span><span class="label">Years Leadership</span></div>
-        </div>
-
-        <!-- The Protocol -->
-        <div class="section manifesto">
-            <h2>The Protocol</h2>
-            <p>
-                19 years of retail logistics taught me two things: how to manage high-volume chaos and how to be <strong>fair, honest, and funny</strong> under pressure.
-                I don't fit the "code-on-demand" mold. I'm an introvert who learned to speak the language of leadership to protect my team and my data.
-                I don't smoke the product; I architect the truth behind it.
-            </p>
-        </div>
-
-        <!-- Currently Shipping -->
-        <div class="section">
-            <h2>Currently Shipping</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🌿 GrowApp</h3>
-                    <p>Personalized daily cultivation guidance based on your strain, lighting & nutrients. 2,800+ strain database.</p>
-                    <div class="badges">
-                        <a href="https://apps.apple.com/us/app/growapp-cannabis-guide/id6751991099">App Store</a>
-                        <a href="https://play.google.com/store/apps/details?id=com.GrowAppCannabisGuide">Google Play</a>
-                        <a href="https://growappcannabis.guide">Web</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>🎭 Mission Mischief</h3>
-                    <p>Social scavenger hunt where hashtags become blockchain proofs. 51 missions. Zero wallets. Pure chaos.</p>
-                    <p class="card-meta">🔬 First implementation of social media as distributed ledger · <a href="https://doi.org/10.5281/zenodo.17620402">DOI</a></p>
-                    <div class="badges">
-                        <a href="https://github.com/Shannon-Goddard/mission-mischief">Repo</a>
-                        <a href="https://github.com/Shannon-Goddard/hashtag-blockchain-proof-of-concept">Whitepaper</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>🌱 Cannabis Intelligence DB</h3>
-                    <p>World's largest cannabis genetics repository. 15,740+ strains with 8,792 AI-extracted data points.</p>
-                    <p class="card-meta">Production API deployed · <a href="https://doi.org/10.5281/zenodo.17645958">DOI</a></p>
-                    <div class="badges">
-                        <a href="https://api.loyal9.app">Live API</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- The Lab (Dev Projects) -->
-        <div class="section">
-            <h2>The Lab</h2>
-            <div class="grid">
-                <a href="https://github.com/Shannon-Goddard/ci-strains-pro" class="card">
-                    <h3>CI-Strains-Pro <span style="font-size: 0.65rem; background: var(--accent); color: white; padding: 0.15rem 0.5rem; border-radius: 20px; vertical-align: middle;">Active Dev</span></h3>
-                    <p>Surgical data integrity. 21k+ strains, 200+ data points. The transition from anecdote to academic-grade intelligence.</p>
-                </a>
-                <a href="https://github.com/Shannon-Goddard/grow_app" class="card">
-                    <h3>GrowApp Mobile</h3>
-                    <p>From a 1,300-case retail shift to a cross-platform mobile ecosystem. 7k+ users navigating verified horticulture.</p>
-                </a>
-                <a href="https://github.com/Shannon-Goddard/forge" class="card">
-                    <h3>.forge</h3>
-                    <p>Side-project born during a 35-hour data scrape. Deterministic identity and biometric verification protocols.</p>
-                </a>
-                <a href="https://github.com/Shannon-Goddard/hashtag-blockchain-proof-of-concept" class="card">
-                    <h3>Hashtag Blockchain</h3>
-                    <p>Distributed ledger theory using structured hashtag protocols. Chaos-driven, cost-reduced verification.</p>
-                </a>
-            </div>
-        </div>
-
-        <!-- The Journey -->
-        <div class="section">
-            <h2>The Journey</h2>
-            <a href="https://www.amazon.com/-/he/Shannon-Goddard/dp/B09F1CW21S" class="book-link">
-                <img src="img/book-cover.jpg" alt="Fatigue & Delay" style="max-width: 140px; border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
-            </a>
-            <ul>
-                <li><strong>The Logistics:</strong> 19 years at Food 4 Less. Rising from Clerk to District Trainer. Mastering the math of scale.</li>
-                <li><strong>The Pivot:</strong> Documented in my book, <a href="https://www.amazon.com/-/he/Shannon-Goddard/dp/B09F1CW21S">Fatigue & Delay</a>. Turning a systemic failure into technical fuel.</li>
-                <li><strong>The Future:</strong> AI-powered cultivation platform that makes all current grow apps obsolete. Comprehensive equipment database + AI + personalized guidance.</li>
-            </ul>
-        </div>
-
-        <!-- Contact -->
-        <div class="section" style="text-align: center;">
-            <h2>Join The Chaos</h2>
-            <p style="color: #8b949e;">Open to remote/contract work. Chaos preferred.</p>
-            <div class="contact">
-                <a href="mailto:shannon@loyal9.app">✉ Email</a>
-                <a href="https://www.linkedin.com/in/shannon-goddard/">LinkedIn</a>
-                <a href="https://github.com/Shannon-Goddard">GitHub</a>
-                <a href="https://www.paypal.com/ncp/payment/SPULE53SCDNW">Fund the Chaos</a>
-            </div>
-        </div>
-
-        <footer>
-            <p>Built with grit in Riverside, CA. Chaos Preferred. Integrity Required.</p>
-        </footer>
+    <!-- Hero -->
+    <div class="hero">
+        <img src="img/hero.png" alt="Shannon Goddard">
+        <h1>Shannon Goddard</h1>
+        <p class="tagline">Founder @ Loyal9 · Full-stack developer shipping apps that actually get used</p>
     </div>
+
+    <!-- Stats -->
+    <div class="stats">
+        <div class="stat"><span class="num">7,000+</span><span class="label">App Users</span></div>
+        <div class="stat"><span class="num">21,220</span><span class="label">Strains Verified</span></div>
+        <div class="stat"><span class="num">160K+</span><span class="label">Video Views</span></div>
+        <div class="stat"><span class="num">19</span><span class="label">Years Leadership</span></div>
+    </div>
+
+    <!-- The Protocol -->
+    <div class="section manifesto">
+        <h2>The Protocol</h2>
+        <p>
+            19 years of retail logistics taught me two things: how to manage high-volume chaos and how to be <strong>fair, honest, and funny</strong> under pressure.
+            I don't fit the "code-on-demand" mold. I'm an introvert who learned to speak the language of leadership to protect my team and my data.
+            I don't smoke the product; I architect the truth behind it.
+        </p>
+    </div>
+
+    <!-- ============ APPS & GAMES ============ -->
+    <div class="section">
+        <h2>Apps & Games</h2>
+        <p class="category-label">Shipped products on App Store & Google Play</p>
+
+        <!-- GrowApp -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/growapp.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-leaf"></i>GrowApp | Cannabis App <span class="badge-live">Live</span></h3>
+                    <span class="project-stat">1,000+ downloads · 1,700 subs · 160K views</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Personalized day-by-day cultivation guidance based on your strain, lighting & nutrients. 2,800+ strain database. AI-powered PlantDoctor, HarvestWindow trichome analysis, and exportable grow schedules.</p>
+                    <div class="icon-links">
+                        <a href="https://apps.apple.com/us/app/growapp-cannabis-app/id6751991099" title="App Store"><i class="fab fa-apple"></i></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.growappcannabiscannabis.guide" title="Google Play"><i class="fab fa-google-play"></i></a>
+                        <a href="https://growappcannabis.guide" title="Website"><i class="fas fa-globe"></i></a>
+                        <a href="https://github.com/Shannon-Goddard/grow_app" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@GrowApp-Cannabisguide" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/Loyal9GrowApp/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/loyal9growapp/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/Loyal9App" title="X"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Heisenberg -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/heisenberg.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-flask"></i>Heisenberg | Cannabis Trivia</h3>
+                    <span class="project-stat">13 questions · $1M in Heisenberg Bucks</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Who Wants to Be a Millionaire-style quiz on cannabis nutrients, growth stages, and feeding schedules. Lifelines include 50:50, Ask Gus, and Poll the Cartel. 20-second timer per question.</p>
+                    <div class="icon-links">
+                        <a href="https://apps.apple.com/us/app/heisenberg-cannabis-trivia/id6744303898" title="App Store"><i class="fab fa-apple"></i></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.heinsenberg" title="Google Play"><i class="fab fa-google-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Short-Term Memory -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/short-term-memory.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-brain"></i>Short-Term Memory</h3>
+                    <span class="project-stat">Strain-matching memory game</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>4x4 grid of cannabis strain cards — flip, match, and prove your memory isn't as fried as your friends think. Leaderboard tracks fastest times and fewest moves.</p>
+                    <div class="icon-links">
+                        <a href="https://apps.apple.com/us/app/short-term-mem-uh/id6744303945" title="App Store"><i class="fab fa-apple"></i></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.shorttermmemory" title="Google Play"><i class="fab fa-google-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Name That Strain -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/name-that-strain.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-puzzle-piece"></i>Name That Strain</h3>
+                    <span class="project-stat">Wheel of Fortune meets cannabis</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Spin the wheel, guess letters, and solve cannabis strain names. Use hints to tackle tricky puzzles and avoid spinning bankrupt.</p>
+                    <div class="icon-links">
+                        <a href="https://apps.apple.com/us/app/name-that-strain/id6744304052" title="App Store"><i class="fab fa-apple"></i></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.namethatstrain" title="Google Play"><i class="fab fa-google-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Go Toke! -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/go-toke.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-cards"></i>Go Toke!</h3>
+                    <span class="project-stat">Go Fish with cannabis strains</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Collect cannabis strain sets in a Go Fish remix against a cheeky AI. Strain logos so dank you'll want them tattooed on your grow journal.</p>
+                    <div class="icon-links">
+                        <a href="https://apps.apple.com/us/app/no-fish/id6744301471" title="App Store"><i class="fab fa-apple"></i></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.loyal9.gotoke" title="Google Play"><i class="fab fa-google-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slots of Bud -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/slots-of-bud.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-slot-machine"></i>Slots of Bud</h3>
+                    <span class="project-stat">5-reel cannabis casino · 1000x jackpot</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Five-reel, four-row cannabis slot machine with strain logos, multipliers, and a 1000x jackpot. All play money — the only thing you're risking is your dignity.</p>
+                    <div class="icon-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.slotsofbud" title="Google Play"><i class="fab fa-google-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cannabis Watch Face -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/cannabis-watch-face.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-clock"></i>Cannabis Watch Face | 420 Time</h3>
+                    <span class="project-stat">100+ strain images · Wear OS</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>100+ cannabis strain images that change on tap. Special 4:20 AM/PM effects and 4:19 countdown animations. Battery-efficient, fully offline, no data collection.</p>
+                    <div class="icon-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.loyal9.strainswatchface" title="Google Play"><i class="fab fa-google-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ DATA PRODUCTS ============ -->
+    <div class="section">
+        <h2>Data Products</h2>
+        <p class="category-label">Cannabis intelligence infrastructure</p>
+
+        <!-- CI-Strains-Pro -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/growapp.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-database"></i>CI-Strains-Pro <span class="badge-active">Active Dev</span></h3>
+                    <span class="project-stat">21,220 strains · 21,706 HTML archives</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Surgical data integrity pipeline. Every strain verified against timestamped, encrypted HTML source archives with 100% traceability. Gemini Flash 2.0 extraction + 20+ hours of human triple-checks. No hallucinations.</p>
+                    <div class="icon-links">
+                        <a href="https://github.com/Shannon-Goddard/ci-strains-pro" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://strains.loyal9.app" title="Live Verification"><i class="fas fa-shield-halved"></i></a>
+                        <a href="https://pro.loyal9.app" title="Enterprise"><i class="fas fa-building"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- poweredby.ci -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-color:#0a0a0a;">
+                <div class="project-header">
+                    <h3><i class="fas fa-bolt"></i>poweredby.ci <span class="badge-live">Live</span></h3>
+                    <span class="project-stat">B2B data licensing · 47 states mapped</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Verified cannabis cultivation data for operators, researchers, and compliance teams. Seed bank directory cross-references USDA hemp licensees against state cannabis registries. Data products: Strains, Seed Banks, Lights, Nutrients, Fans, Mediums.</p>
+                    <div class="icon-links">
+                        <a href="https://poweredby.ci" title="Website"><i class="fas fa-globe"></i></a>
+                        <a href="mailto:data@poweredby.ci" title="B2B Inquiries"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ EXPERIMENTAL ============ -->
+    <div class="section">
+        <h2>Experimental</h2>
+        <p class="category-label">R&D and upcoming launches</p>
+
+        <!-- Mission Mischief -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/mission-mischief.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-masks-theater"></i>Mission Mischief <span class="badge-soon">Late 2026</span></h3>
+                    <span class="project-stat">51 missions · zero wallets · pure chaos</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Social scavenger hunt where hashtags become blockchain proofs. First implementation of social media as a distributed ledger. 99% accuracy with community consensus. $5 honor payments. No enforcement — just shame.</p>
+                    <div class="icon-links">
+                        <a href="https://github.com/Shannon-Goddard/mission-mischief" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Shannon-Goddard/hashtag-blockchain-proof-of-concept" title="Whitepaper"><i class="fas fa-file-lines"></i></a>
+                        <a href="https://doi.org/10.5281/zenodo.17620402" title="DOI"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://www.facebook.com/mission.mischief/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/missionmischief_official/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/Missio_Mischief" title="X"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- .forge -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/forge.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-fingerprint"></i>.forge</h3>
+                    <span class="project-stat">Deterministic identity lab</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Born during a 35-hour data scrape. Synthesizes live biometric data (BPM, HRV, gait, screen time, ambient light, noise floor) into a 7-second vibe receipt. No storage. No options. Share to save or it's lost to the void.</p>
+                    <div class="icon-links">
+                        <a href="https://play.google.com/store/apps/details?id=app.loyal9.forge" title="Google Play"><i class="fab fa-google-play"></i></a>
+                        <a href="https://github.com/Shannon-Goddard/forge" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hashtag Blockchain -->
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-color:#0a0a0a;">
+                <div class="project-header">
+                    <h3><i class="fas fa-link"></i>Hashtag Blockchain</h3>
+                    <span class="project-stat">DOI published · 95% cost reduction</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Distributed ledger theory using structured hashtag protocols. 1,000+ verified transactions. Proves social media can function as a consensus layer without wallets, gas fees, or crypto bros.</p>
+                    <div class="icon-links">
+                        <a href="https://github.com/Shannon-Goddard/hashtag-blockchain-proof-of-concept" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://doi.org/10.5281/zenodo.17620402" title="DOI"><i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ THE JOURNEY ============ -->
+    <div class="section">
+        <h2>The Journey</h2>
+        <a href="https://www.amazon.com/-/he/Shannon-Goddard/dp/B09F1CW21S" class="book-link">
+            <img src="img/book-cover.jpg" alt="Fatigue & Delay" style="max-width:140px;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,.5);">
+        </a>
+        <ul>
+            <li><strong>The Logistics:</strong> 19 years at Food 4 Less. Rising from Clerk to District Trainer. Mastering the math of scale.</li>
+            <li><strong>The Pivot:</strong> Documented in my book, <a href="https://www.amazon.com/-/he/Shannon-Goddard/dp/B09F1CW21S">Fatigue & Delay</a>. 4.5 stars. Turning a systemic failure into technical fuel.</li>
+            <li><strong>The Future:</strong> AI-powered cultivation platform that makes all current grow apps obsolete.</li>
+        </ul>
+    </div>
+
+    <!-- ============ CONTACT ============ -->
+    <div class="section" style="text-align:center;">
+        <h2>Join The Chaos</h2>
+        <p style="color:#8b949e;">Open to remote/contract work. Chaos preferred.</p>
+        <div class="contact">
+            <a href="mailto:shannon@loyal9.app"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/shannon-goddard/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Shannon-Goddard"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.paypal.com/ncp/payment/SPULE53SCDNHW"><i class="fab fa-paypal"></i> Fund the Chaos</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Built with grit in Riverside, CA. Chaos Preferred. Integrity Required.</p>
+    </footer>
+</div>
 </body>
 </html>
