@@ -37,11 +37,12 @@
         .project-bg{position:relative;width:100%;min-height:80px;background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#0a0a0a;border-radius:8px;overflow:hidden;}
         .project-bg::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.88);z-index:1;}
         .project-bg::after{content:"";position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to top,rgba(0,0,0,.9),transparent);z-index:1;}
-        .project-header{position:relative;z-index:2;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+        .project-header{position:relative;z-index:2;padding:1.25rem 2.5rem 1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
         .project-header h3{color:#fff;font-size:1.1rem;margin:0;}
         .project-header h3 i{margin-right:.5rem;color:var(--accent);}
         .project-stat{color:var(--accent);font-size:.85rem;font-weight:600;white-space:nowrap;}
-        .expand-icon{color:#8b949e;font-size:.8rem;transition:transform .3s;}
+        .expand-icon{color:#8b949e;font-size:.8rem;transition:transform .3s;position:absolute;right:1rem;top:50%;transform:translateY(-50%);}
+        .project-row.open .expand-icon{transform:translateY(-50%) rotate(180deg);}
         .project-row.open .expand-icon{transform:rotate(180deg);}
         .project-detail{position:relative;z-index:2;padding:0 1.5rem 1.25rem;display:none;}
         .project-row.open .project-detail{display:block;}
@@ -281,7 +282,7 @@
         <div class="project-row" onclick="this.classList.toggle('open')">
             <div class="project-bg" style="background-image:url('img/mission-mischief.png');">
                 <div class="project-header">
-                    <h3><i class="fas fa-masks-theater"></i>Mission Mischief <span class="badge-soon">Late 2026</span></h3>
+                    <h3><i class="fas fa-masks-theater"></i>Mission Mischief</h3><span class="badge-soon">2027</span>
                     <span class="project-stat">51 missions &middot; zero wallets &middot; pure chaos</span>
                     <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
@@ -346,13 +347,13 @@
             <div class="project-bg" style="background-image:url('img/fatigue-delay.png');">
                 <div class="project-header">
                     <h3><i class="fa-solid fa-book"></i>Fatigue &amp; Delay</h3>
-                    <span class="project-stat">Turning a systemic failure into technical fuel.</span>
+                    <span class="project-stat">Systemic failure &rarr; technical fuel.</span>
                     <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p><a href="https://www.amazon.com/-/he/Shannon-Goddard/dp/B09F1CW21S">Fatigue &amp; Delay: A workers&rsquo; compensation nightmare</a></p>
                     <p>The workers&rsquo; compensation system is broken and in need of reform. Convicted felons and terrorist are treated more humanly in provided medical care than that of an injured worker. Workers&rsquo; compensation case studies have just started a couple of years ago. The data reveals a strong correlation to opioid addiction, overdose, and suicide of an injured employee going through the workers&rsquo; compensation process. Unfortunately, this is still not in the forefront of the average person to contribute outrage for change. This is just one story to show the denial of appropriate medical treatment to an injured employee and the needless pain and suffering that comes with it.</p>
-                    <p><i class="fa-regular fa-pen-to-square"></i> <b>August 27, 2021</b> &nbsp; 4.5 <i class="fa-regular fa-star" style="color:rgb(255,212,59);"></i><i class="fa-regular fa-star" style="color:rgb(255,212,59);"></i><i class="fa-regular fa-star" style="color:rgb(255,212,59);"></i><i class="fa-regular fa-star" style="color:rgb(255,212,59);"></i><i class="fa-regular fa-star-half" style="color:rgb(255,212,59);"></i></p>
+                    <p><small><i class="fa-regular fa-pen-to-square"></i> <b>August 27, 2021</b> &nbsp; 4.5 <i class="fa-regular fa-star" style="color:rgb(255,212,59);"></i><i class="fa-regular fa-star" style="color:rgb(255,212,59);"></i><i class="fa-regular fa-star" style="color:rgb(255,212,59);"></i><i class="fa-regular fa-star" style="color:rgb(255,212,59);"></i><i class="fa-regular fa-star-half" style="color:rgb(255,212,59);"></small></i></p>
                     <div class="icon-links">
                         <a href="https://www.amazon.com/Shannon-Goddard/dp/B09F1CW21S" title="Amazon"><i class="fa-brands fa-amazon"></i></a>
                     </div>
