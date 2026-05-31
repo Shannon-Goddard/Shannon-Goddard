@@ -85,7 +85,7 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 
 # What's Next
 
-**🚀 2026 Vision:** AI-powered cultivation platform that makes all current grow apps obsolete  
+**🚀 2027 Vision:** AI-powered cultivation platform that makes all current grow apps obsolete  
 **💡 Approach:** Comprehensive equipment database + AI + personalized guidance  
 **🎯 Market:** Cannabis industry needs better cultivation intelligence
 
