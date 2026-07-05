@@ -93,15 +93,15 @@ Founder @ Loyal9 | Full-stack developer shipping apps that actually get used. Fr
 
 # Join The Chaos
 
-**Status:** Open to remote/contract work (chaos preferred)
+**Connect:** Be a part of something great... and most likely legal.
 
 [![gmail](https://img.shields.io/badge/gmail-Contact-red?logo=gmail&logoColor=white)](mailto:shannon@loyal9.app) 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shannon-goddard/) 
 
 # 
 
-**Fund the chaos:** Be a part of something great... and most likely legal.  
+**Buy the dev a beer 🍺**   
  
-[![Support my work](https://img.shields.io/badge/PayPal-Support-blue?logo=paypal)](https://www.paypal.com/ncp/payment/SPULE53SCDNHW)
+[!["Buy Me A Coffee"](https://img.shields.io/badge/-buy_me_a%C2%A0coffee-gray?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/goddardshannon9)
 
 ![Footer](img/hero.png)
