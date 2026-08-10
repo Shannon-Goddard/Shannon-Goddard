@@ -554,7 +554,7 @@
 <script>
 (async () => {
   try {
-    const res = await fetch('https://8f7a411f8000fd0e6720cd54357f44d3.execute-api.us-east-1.amazonaws.com/Prod/api/public')
+    const res = await fetch('https://gzdj38qnud.execute-api.us-east-1.amazonaws.com/Prod/api/public')
     const d = await res.json()
     const fmt = n => n >= 1000 ? (n >= 1000000 ? (n/1000000).toFixed(1)+'M' : Math.round(n/1000)+'K') : String(n)
 
