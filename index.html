@@ -53,6 +53,12 @@
         .badge-active{font-size:.6rem;background:#aa6d04;color:#000;padding:.15rem .5rem;border-radius:20px;vertical-align:middle;margin-left:.4rem;}
         .badge-soon{font-size:.6rem;background:#6d04aa;color:#000;padding:.15rem .5rem;border-radius:20px;vertical-align:middle;margin-left:.4rem;}
         .badge-live{font-size:.6rem;background:#0494aa;color:#000;padding:.15rem .5rem;border-radius:20px;vertical-align:middle;margin-left:.4rem;}
+        .live-stats-block{margin-top:.75rem;padding:.75rem 1rem;background:rgba(4,170,109,.06);border:1px solid rgba(4,170,109,.2);border-radius:6px;}
+        .live-stats-block .ls-row{display:flex;justify-content:space-between;align-items:center;padding:.2rem 0;font-size:.85rem;color:#ccc;}
+        .live-stats-block .ls-val{color:var(--accent);font-weight:700;}
+        .live-stats-block .ls-countries{margin-top:.5rem;padding-top:.5rem;border-top:1px solid var(--border);}
+        .live-stats-block .ls-country{display:flex;justify-content:space-between;font-size:.8rem;color:#8b949e;padding:.15rem 0;}
+        .live-stats-block .ls-country span{color:#ccc;}
         .category-label{color:#8b949e;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;padding-left:.25rem;}
         .section ul{padding-left:1.25rem;}
         .section li{margin-bottom:.5rem;color:#ccc;font-size:.9rem;}
@@ -80,9 +86,10 @@
     </div>
 
     <div class="stats">
-        <div class="stat"><span class="num">160,000</span><span class="label">Video Views</span></div>
+        <div class="stat"><span class="num" id="stat-views">—</span><span class="label">Video Views</span></div>
         <div class="stat"><span class="num">21,220</span><span class="label">Strains Verified</span></div>
-        <div class="stat"><span class="num">50K+</span><span class="label">Website Users</span></div>
+        <div class="stat"><span class="num" id="stat-downloads">—</span><span class="label">App Downloads</span></div>
+        <div class="stat"><span class="num" id="stat-subs">—</span><span class="label">YouTube Subs</span></div>
         <div class="stat"><span class="num">19</span><span class="label">Years Leadership</span></div>
     </div>
     <p style="text-align:center;color:#8b949e;font-size:.85rem;margin-bottom:2rem;">Building the data layer the cannabis industry doesn&rsquo;t have yet &mdash; from verified genetics to AI-powered diagnostics.</p>
@@ -104,16 +111,25 @@
         <div class="project-row" onclick="this.classList.toggle('open')">
             <div class="project-bg" style="background-image:url('img/growapp.png');">
                 <div class="project-header">
-                    <h3>GrowApp<i class="fas fa-leaf"></i> <span class="badge-live">Live</span></h3>
-                    <span class="project-stat">2k+ downloads &middot; 1,700 subs &middot; 160K views</span>
+                    <h3>GrowApp<i class="fas fa-leaf"></i> <span class="badge-live">Live Stats</span></h3>
+                    <span class="project-stat" id="growapp-project-stat">loading...</span>
                     <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>Personalized day-by-day cultivation guidance based on your strain, lighting &amp; nutrients. 2,800+ strain database. AI-powered PlantDoctor, HarvestWindow trichome analysis, and exportable grow schedules.</p>
+                    <div class="live-stats-block" id="growapp-live-stats">
+                        <div class="ls-row"><span>Total Downloads</span><span class="ls-val" id="ls-downloads">—</span></div>
+                        <div class="ls-row"><span>YouTube Subscribers</span><span class="ls-val" id="ls-subs">—</span></div>
+                        <div class="ls-row"><span>YouTube Total Views</span><span class="ls-val" id="ls-views">—</span></div>
+                        <div class="ls-countries">
+                            <div style="font-size:.75rem;color:#8b949e;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.35rem;">Top Countries &mdash; loyal9.app</div>
+                            <div id="ls-countries"></div>
+                        </div>
+                    </div>
                     <p><small>&copy;</small> <b>2023</b> <small>Loyal9 LLC</small></p>
                     <div class="icon-links">
                         <a href="https://apps.apple.com/us/app/growapp-cannabis-app/id6751991099" title="App Store"><i class="fab fa-apple"></i></a>
-                        <a href="https://play.google.com/store/apps/details?id=com.growappcannabiscannabis.guide" title="Google Play"><i class="fab fa-google-play"></i></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.GrowAppCannabisGuide" title="Google Play"><i class="fab fa-google-play"></i></a>
                         <a href="https://growappcannabis.guide" title="Website"><i class="fas fa-globe"></i></a>
                         <a href="https://github.com/Shannon-Goddard/grow_app" title="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://www.youtube.com/@GrowApp-Cannabisguide" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -535,5 +551,36 @@
         <p>Built with grit in Riverside, CA. Chaos Preferred. Integrity Required.</p>
     </footer>
 </div>
+<script>
+(async () => {
+  try {
+    const res = await fetch('https://8f7a411f8000fd0e6720cd54357f44d3.execute-api.us-east-1.amazonaws.com/Prod/api/public')
+    const d = await res.json()
+    const fmt = n => n >= 1000 ? (n >= 1000000 ? (n/1000000).toFixed(1)+'M' : Math.round(n/1000)+'K') : String(n)
+
+    // Top stats bar
+    document.getElementById('stat-views').textContent = fmt(d.youtube?.totalViews ?? 0)
+    document.getElementById('stat-downloads').textContent = fmt(d.growApp?.downloads ?? 0)
+    document.getElementById('stat-subs').textContent = fmt(d.youtube?.subscribers ?? 0)
+
+    // GrowApp project-stat line
+    document.getElementById('growapp-project-stat').textContent =
+      `${fmt(d.growApp?.downloads ?? 0)} downloads · ${fmt(d.youtube?.subscribers ?? 0)} subs · ${fmt(d.youtube?.totalViews ?? 0)} views`
+
+    // GrowApp expanded live stats
+    document.getElementById('ls-downloads').textContent = (d.growApp?.downloads ?? 0).toLocaleString()
+    document.getElementById('ls-subs').textContent = (d.youtube?.subscribers ?? 0).toLocaleString()
+    document.getElementById('ls-views').textContent = (d.youtube?.totalViews ?? 0).toLocaleString()
+
+    // Top countries
+    const countries = d.loyal9App?.topCountries ?? []
+    document.getElementById('ls-countries').innerHTML = countries.map(c =>
+      `<div class="ls-country"><span>${c.country}</span><span>${c.users.toLocaleString()} visitors</span></div>`
+    ).join('')
+  } catch(e) {
+    console.warn('Stats unavailable', e)
+  }
+})()
+</script>
 </body>
 </html>
