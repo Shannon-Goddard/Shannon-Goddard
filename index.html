@@ -75,6 +75,14 @@
             .project-header{flex-wrap:wrap;gap:.5rem;}
             .project-stat{font-size:.75rem;}
         }
+    
+    .sub-accordion{border:1px solid #21262d;border-radius:8px;margin-bottom:.75rem;overflow:hidden;}
+    .sub-accordion-header{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;background:#161b22;cursor:pointer;user-select:none;}
+    .sub-accordion-header h3{margin:0;font-size:1rem;color:#e6edf3;font-weight:600;}
+    .sub-accordion-header .expand-icon{color:#8b949e;transition:transform .3s;}
+    .sub-accordion.open .sub-accordion-header .expand-icon{transform:rotate(180deg);}
+    .sub-accordion-body{display:none;padding:.5rem 0 0;}
+    .sub-accordion.open .sub-accordion-body{display:block;}
     </style>
 </head>
 <body>
@@ -82,7 +90,7 @@
 
     <div class="hero">
         <h1>Shannon Goddard</h1>
-        <p class="tagline">Founder @ Loyal9 &middot; Full-stack developer shipping apps that actually get used</p>
+        <p class="tagline">Founder @ Loyal9 &middot; I build weird stuff that works.</p>
     </div>
 
     <div class="stats">
@@ -97,9 +105,9 @@
     <div class="section manifesto">
         <h2>The Protocol</h2>
         <p>
-            19 years of retail logistics taught me two things: how to manage high-volume chaos and how to be <strong>fair, honest, and funny</strong> under pressure.
-            I don&rsquo;t fit the &ldquo;code-on-demand&rdquo; mold. I&rsquo;m an introvert who learned to speak the language of leadership to protect my team and my data.
-            I don&rsquo;t smoke the product; I architect the truth behind it.
+            19 years in retail forged a raw mix of <strong>grit, humor, and operational integrity</strong>.
+            I don&rsquo;t smoke weed, yet I build advanced cannabis cultivation tools.
+            Forget the standard &rsquo;code-on-demand&rsquo; mold. I&rsquo;m fueled by coffee. I love dogs and numbers — because neither lie. Some people are cool; mostly artists.
         </p>
     </div>
 
@@ -108,19 +116,24 @@
         <h2>Apps &amp; Games</h2>
         <p class="category-label">Shipped products on App Store &amp; Google Play</p>
 
-        <div class="project-row" onclick="this.classList.toggle('open')">
+        <div class="sub-accordion open" onclick="event.stopPropagation();this.classList.toggle('open')">
+            <div class="sub-accordion-header">
+                <h3><i class="fas fa-mobile-alt"></i> Apps</h3>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="sub-accordion-body">
+        <div class="project-row open">
             <div class="project-bg" style="background-image:url('img/growapp.png');">
                 <div class="project-header">
                     <h3>GrowApp<i class="fas fa-leaf"></i> <span class="badge-live">Live Stats</span></h3>
                     <span class="project-stat" id="growapp-project-stat">loading...</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>Personalized day-by-day cultivation guidance based on your strain, lighting &amp; nutrients. 2,800+ strain database. AI-powered PlantDoctor, HarvestWindow trichome analysis, and exportable grow schedules.</p>
                     <div class="live-stats-block" id="growapp-live-stats">
-                        <div class="ls-row"><span>Total Downloads</span><span class="ls-val" id="ls-downloads">—</span></div>
-                        <div class="ls-row"><span>YouTube Subscribers</span><span class="ls-val" id="ls-subs">—</span></div>
-                        <div class="ls-row"><span>YouTube Total Views</span><span class="ls-val" id="ls-views">—</span></div>
+                        <div class="ls-row"><span>Total Downloads</span><span class="ls-val" id="ls-downloads"></span></div>
+                        <div class="ls-row"><span>YouTube Subscribers</span><span class="ls-val" id="ls-subs"></span></div>
+                        <div class="ls-row"><span>YouTube Total Views</span><span class="ls-val" id="ls-views"></span></div>
                         <div class="ls-countries">
                             <div style="font-size:.75rem;color:#8b949e;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.35rem;">Website's &mdash; Top Countries</div>
                             <div id="ls-countries"></div>
@@ -140,13 +153,20 @@
                 </div>
             </div>
         </div>
+            </div>
+        </div>
 
-        <div class="project-row" onclick="this.classList.toggle('open')">
+        <div class="sub-accordion" onclick="event.stopPropagation();this.classList.toggle('open')">
+            <div class="sub-accordion-header">
+                <h3><i class="fas fa-gamepad"></i> Games</h3>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="sub-accordion-body">
+        <div class="project-row open">
             <div class="project-bg" style="background-image:url('img/heisenberg.png');">
                 <div class="project-header">
                     <h3><i class="fas fa-flask"></i>Heisenberg | Trivia</h3>
                     <span class="project-stat">13 questions &middot; $1M in Heisenberg Bucks</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>Who Wants to Be a Millionaire-style quiz on cannabis nutrients, growth stages, and feeding schedules. Lifelines include 50:50, Ask Gus, and Poll the Cartel. 20-second timer per question.</p>
@@ -158,13 +178,11 @@
                 </div>
             </div>
         </div>
-
-        <div class="project-row" onclick="this.classList.toggle('open')">
+        <div class="project-row open">
             <div class="project-bg" style="background-image:url('img/short-term-memory.png');">
                 <div class="project-header">
                     <h3><i class="fas fa-brain"></i>Short-Term Memory</h3>
                     <span class="project-stat">Strain-matching memory game</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>4x4 grid of cannabis strain cards &mdash; flip, match, and prove your memory isn&rsquo;t as fried as your friends think. Leaderboard tracks fastest times and fewest moves.</p>
@@ -176,13 +194,11 @@
                 </div>
             </div>
         </div>
-
-        <div class="project-row" onclick="this.classList.toggle('open')">
+        <div class="project-row open">
             <div class="project-bg" style="background-image:url('img/name-that-strain.png');">
                 <div class="project-header">
                     <h3><i class="fas fa-puzzle-piece"></i>Name That Strain</h3>
                     <span class="project-stat">Wheel of Fortune meets cannabis</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>Spin the wheel, guess letters, and solve cannabis strain names. Use hints to tackle tricky puzzles and avoid spinning bankrupt.</p>
@@ -194,13 +210,11 @@
                 </div>
             </div>
         </div>
-
-        <div class="project-row" onclick="this.classList.toggle('open')">
+        <div class="project-row open">
             <div class="project-bg" style="background-image:url('img/go-toke.png');">
                 <div class="project-header">
                     <h3><i class="fa-solid fa-fish"></i>Go Toke!</h3>
                     <span class="project-stat">Go Fish with cannabis strains</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>Collect cannabis strain sets in a Go Fish remix against a cheeky AI. Strain logos so dank you&rsquo;ll want them tattooed on your grow journal.</p>
@@ -212,13 +226,11 @@
                 </div>
             </div>
         </div>
-
-        <div class="project-row" onclick="this.classList.toggle('open')">
+        <div class="project-row open">
             <div class="project-bg" style="background-image:url('img/slots-of-bud.png');">
                 <div class="project-header">
                     <h3><i class="fa-solid fa-circle-dollar-to-slot"></i>Slots of Bud</h3>
                     <span class="project-stat">5-reel cannabis casino &middot; 1000x jackpot</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>Five-reel, four-row cannabis slot machine with strain logos, multipliers, and a 1000x jackpot. All play money &mdash; the only thing you&rsquo;re risking is your dignity.</p>
@@ -229,13 +241,11 @@
                 </div>
             </div>
         </div>
-
-        <div class="project-row" onclick="this.classList.toggle('open')">
+        <div class="project-row open">
             <div class="project-bg" style="background-image:url('img/cannabis-watch-face.png');">
                 <div class="project-header">
                     <h3><i class="fas fa-clock"></i>Cannabis Watch Face</h3>
                     <span class="project-stat">100+ strain images &middot; Wear OS</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>100+ cannabis strain images that change on tap. Special 4:20 AM/PM effects and 4:19 countdown animations. Battery-efficient, fully offline, no data collection.</p>
@@ -246,92 +256,24 @@
                 </div>
             </div>
         </div>
-    </div>
-
+            </div>
+        </div>
     <!-- DATA PRODUCTS -->
     <div class="section">
         <h2>Data Products</h2>
         <p class="category-label">Cannabis intelligence infrastructure</p>
 
-        <div class="project-row" onclick="this.classList.toggle('open')">
-            <div class="project-bg" style="background-image:url('img/growapp.png');">
-                <div class="project-header">
-                    <h3><i class="fas fa-database"></i>CI-Strains-Pro <span class="badge-active">Active</span></h3>
-                    <span class="project-stat">21,220 strains &middot; 21,706 HTML archives</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
-                </div>
-                <div class="project-detail">
-                    <p>Surgical data integrity pipeline. Every strain verified against timestamped, encrypted HTML source archives with 100% traceability. Gemini Flash 2.0 extraction + 20+ hours of human triple-checks. No hallucinations.</p>
-                    <p><small>&copy;</small> <b>2026</b> <small>Loyal9 LLC</small></p>
-                    <div class="icon-links">
-                        <a href="https://github.com/Shannon-Goddard/ci-strains-pro" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://strains.loyal9.app" title="Live Verification"><i class="fas fa-shield-halved"></i></a>
-                    </div>
-                </div>
+        <div class="sub-accordion" onclick="event.stopPropagation();this.classList.toggle('open')">
+            <div class="sub-accordion-header">
+                <h3><i class="fas fa-bolt"></i> poweredbyci.live</h3>
+                <i class="fas fa-chevron-down expand-icon"></i>
             </div>
-        </div>
-
-        <div class="project-row" onclick="this.classList.toggle('open')">
-            <div class="project-bg" style="background-image:url('img/seed-map.png');">
-                <div class="project-header">
-                    <h3><i class="fas fa-map-location-dot"></i>CI Seed Map <span class="badge-live">Live</span></h3>
-                    <span class="project-stat">763 pins &middot; 924 breeders &middot; 27+ states</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
-                </div>
-                <div class="project-detail">
-                    <p>Interactive, intelligence-driven map of cannabis seed breeders, seed banks, dispensaries, and cultivators across the US. Built for the post-hemp-law world where seeds can&rsquo;t cross state lines &mdash; growers need to know what genetics are available within their state, right now.</p>
-                    <p>1,039 entries with hand-written audit notes, 700+ brand logos, dual-mode UI (Location + Breeder), logo marker priority stacking, HMAC session auth, and AWS serverless backend.</p>
-                    <p><small>&copy;</small> <b>2026</b> <small>Loyal9 LLC</small></p>
-                    <div class="icon-links">
-                        <a href="https://seed-map.poweredbyci.live" title="Live Map"><i class="fas fa-globe"></i></a>
-                        <a href="https://github.com/Shannon-Goddard/seed-map-usa" title="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-row" onclick="this.classList.toggle('open')">
-            <div class="project-bg" style="background-image:url('img/us-cannabis-license-directory.png');">
-                <div class="project-header">
-                    <h3><i class="fas fa-map-location-dot"></i>US Cannabis License Directory <span class="badge-live">Live</span></h3>
-                    <span class="project-stat">Federal &amp; state regulatory sources &middot; MIT</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
-                </div>
-                <div class="project-detail">
-                    <p>A consolidated directory of cannabis and hemp businesses operating in the United States, compiled from federal and state regulatory sources and verified breeder directories. Built in response to the FY 2026 Agriculture Appropriations Act (P.L. 119-37, Section 781), which adopts a Total THC standard effective November 12, 2026.</p>
-                    <p><small>&copy;</small> <b>2026</b> <small>Loyal9 LLC &middot; MIT License</small></p>
-                    <div class="icon-links">
-                        <a href="https://github.com/Shannon-Goddard/us-cannabis-license-directory" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://doi.org/10.5281/zenodo.19800772" title="DOI"><i class="fas fa-graduation-cap"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-row" onclick="this.classList.toggle('open')">
-            <div class="project-bg" style="background-image:url('img/lighting.png');">
-                <div class="project-header">
-                    <h3><i class="fas fa-lightbulb"></i>Lighting Calculator <span class="badge-live">Live</span></h3>
-                    <span class="project-stat">140 lights &middot; full cycle cost &middot; your rate</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
-                </div>
-                <div class="project-detail">
-                    <p>See exactly what your grow will cost to run before you buy a single light. Enter your zip code&rsquo;s electricity rate, pick your lights, set your cycle &mdash; get the real number. 140 fixtures with verified wattage data.</p>
-                    <p><small>&copy;</small> <b>2026</b> <small>Loyal9 LLC</small></p>
-                    <div class="icon-links">
-                        <a href="https://lighting.poweredbyci.live" title="Live Tool"><i class="fas fa-globe"></i></a>
-                        <a href="https://github.com/Shannon-Goddard/lighting-calculator" title="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="sub-accordion-body">
+        <div class="project-row open">
             <div class="project-bg" style="background-image:url('img/poweredbyci.png');">
                 <div class="project-header">
                     <h3><i class="fas fa-bolt"></i>poweredbyci.live <span class="badge-live">Live</span></h3>
                     <span class="project-stat">FREE tools &middot; B2B data licensing</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>Verified cannabis cultivation data for operators, researchers, and compliance teams. Free tools for growers. Verified datasets for the industry. Full roadmap from data collection to AI vision model. Every number has a receipt.</p>
@@ -344,15 +286,47 @@
                 </div>
             </div>
         </div>
+        <div class="project-row open">
+            <div class="project-bg" style="background-image:url('img/seed-map.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-map-location-dot"></i>CI Seed Map <span class="badge-live">Live</span></h3>
+                    <span class="project-stat">763 pins &middot; 924 breeders &middot; 27+ states</span>
+                </div>
+                <div class="project-detail">
+                    <p>Interactive, intelligence-driven map of cannabis seed breeders, seed banks, dispensaries, and cultivators across the US. Built for the post-hemp-law world where seeds can&rsquo;t cross state lines &mdash; growers need to know what genetics are available within their state, right now.</p>
+                    <p>1,039 entries with hand-written audit notes, 700+ brand logos, dual-mode UI (Location + Breeder), logo marker priority stacking, HMAC session auth, and AWS serverless backend.</p>
+                    <p><small>&copy;</small> <b>2026</b> <small>Loyal9 LLC</small></p>
+                    <div class="icon-links">
+                        <a href="https://seed-map.poweredbyci.live" title="Live Map"><i class="fas fa-globe"></i></a>
+                        <a href="https://github.com/Shannon-Goddard/seed-map-usa" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-row open">
+            <div class="project-bg" style="background-image:url('img/lighting.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-lightbulb"></i>Lighting Calculator <span class="badge-live">Live</span></h3>
+                    <span class="project-stat">140 lights &middot; full cycle cost &middot; your rate</span>
+                </div>
+                <div class="project-detail">
+                    <p>See exactly what your grow will cost to run before you buy a single light. Enter your zip code&rsquo;s electricity rate, pick your lights, set your cycle &mdash; get the real number. 140 fixtures with verified wattage data.</p>
+                    <p><small>&copy;</small> <b>2026</b> <small>Loyal9 LLC</small></p>
+                    <div class="icon-links">
+                        <a href="https://lighting.poweredbyci.live" title="Live Tool"><i class="fas fa-globe"></i></a>
+                        <a href="https://github.com/Shannon-Goddard/lighting-calculator" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <p class="category-label" style="margin-top:2rem;">What this data builds</p>
+        <p class="category-label" style="margin-top:1.5rem;padding:0 .5rem;">What this data builds</p>
 
-        <div class="project-row" onclick="this.classList.toggle('open')">
+        <div class="project-row open">
             <div class="project-bg" style="background-color:#0a0a0a;">
                 <div class="project-header">
                     <h3><i class="fas fa-seedling"></i>Grow App <span class="badge-soon">Building</span></h3>
                     <span class="project-stat">IoT sync &middot; automated diary &middot; Grow Passport</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>A full-cycle cultivation companion built on top of every dataset on this page. Log your grow, sync your environment sensors, track VPD, PPFD, EC, and pH in real time. Every photo gets tagged with structured metadata &mdash; strain, stage, conditions, problem labels &mdash; and stored as ground truth.</p>
@@ -362,13 +336,11 @@
                 </div>
             </div>
         </div>
-
-        <div class="project-row" onclick="this.classList.toggle('open')">
+        <div class="project-row open">
             <div class="project-bg" style="background-color:#0a0a0a;">
                 <div class="project-header">
                     <h3><i class="fas fa-eye"></i>Plant Vision AI <span class="badge-soon">Building</span></h3>
                     <span class="project-stat">drop a photo &middot; get the answer</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
                 </div>
                 <div class="project-detail">
                     <p>Drop a photo of your plant. Get everything &mdash; strain identification, deficiency diagnosis, pest detection, stage classification, harvest readiness. No guessing. No forum rabbit holes.</p>
@@ -376,6 +348,8 @@
                     <p>The data builds the Grow App. The Grow App builds this. That&rsquo;s the whole play.</p>
                     <p><small>&copy;</small> <b>2026</b> <small>Loyal9 LLC</small></p>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
     </div>
@@ -407,23 +381,6 @@
             </div>
         </div>
 
-        <div class="project-row" onclick="this.classList.toggle('open')">
-            <div class="project-bg" style="background-image:url('img/hashtag-blockchain.png');">
-                <div class="project-header">
-                    <h3><i class="fas fa-link"></i>Hashtag Blockchain</h3>
-                    <span class="project-stat">DOI published &middot; 95% cost reduction</span>
-                    <i class="fas fa-chevron-down expand-icon"></i>
-                </div>
-                <div class="project-detail">
-                    <p>Distributed ledger theory using structured hashtag protocols. 1,000+ verified transactions. Proves social media can function as a consensus layer without wallets, gas fees, or crypto bros.</p>
-                    <p><small>&copy;</small> <b>2025</b> <small>Loyal9 LLC</small></p>
-                    <div class="icon-links">
-                        <a href="https://github.com/Shannon-Goddard/hashtag-blockchain-proof-of-concept" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://doi.org/10.5281/zenodo.17620402" title="DOI"><i class="fas fa-graduation-cap"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="project-row" onclick="this.classList.toggle('open')">
             <div class="project-bg" style="background-image:url('img/forge.png');">
@@ -458,6 +415,25 @@
                         <a href="https://shannon-goddard.github.io/pharmacopeia-extemporanea-archive" title="Website"><i class="fa-solid fa-book-skull"></i></a>
                         <a href="https://github.com/Shannon-Goddard/pharmacopeia-extemporanea-archive" title="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://zenodo.org/records/20576814" title="DOI"><i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-row" onclick="this.classList.toggle('open')">
+            <div class="project-bg" style="background-image:url('img/stock-porn.png');">
+                <div class="project-header">
+                    <h3><i class="fas fa-chart-line"></i>Stock Porn <span class="badge-soon">Live</span></h3>
+                    <span class="project-stat">Because numbers are sexy and fun to watch</span>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="project-detail">
+                    <p>Democratize what hedge funds charge for. Retail traders get the same tools, data, and methodology &mdash; for free. Set up as a joke. Delivers real alpha. Legally covered.</p>
+                    <p>Scans 5,300+ optionable US stocks daily (NYSE, Nasdaq, AMEX). Filters to liquid signals &mdash; price &ge; $10, volume &ge; 500K/day. Selects one CALL and one PUT at 3:55 PM PST. Scores pre-market news at 6:25 AM PST with bullish/bearish keyword analysis. Exits at 6:31 AM PST with Black-Scholes FOMO calculations on every trade. Every decision published. Every win and loss on record. No black box. No course to sell. No Discord with a monthly fee.</p>
+                    <p><small>&copy;</small> <b>2026</b> <small>Loyal9 LLC</small></p>
+                    <div class="icon-links">
+                        <a href="https://stock-porn.loyal9.app" title="Live"><i class="fas fa-globe"></i></a>
+                        <a href="https://github.com/Shannon-Goddard/stock-porn" title="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -537,7 +513,7 @@
     <!-- CONTACT -->
     <div class="section" style="text-align:center;">
         <h2>Join The Chaos</h2>
-        <p style="color:#8b949e;">Open to partnerships, licensing, and contract builds. Chaos preferred.</p>
+        <p style="color:#8b949e;">Let's build something weird or shouldn't exist.</p>
         <div class="contact">
             <a href="mailto:shannon@loyal9.app"><i class="fas fa-envelope"></i> Email</a>
             <a href="https://www.linkedin.com/in/shannon-goddard/"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -560,15 +536,15 @@
 
     // Top stats bar
     document.getElementById('stat-views').textContent = fmt(d.youtube?.totalViews ?? 0)
-    document.getElementById('stat-downloads').textContent = fmt(d.growApp?.downloads ?? 0)
+    document.getElementById('stat-downloads').textContent = fmt((d.growApp?.downloads ?? 0) + 3570)
     document.getElementById('stat-subs').textContent = fmt(d.youtube?.subscribers ?? 0)
 
     // GrowApp project-stat line
     document.getElementById('growapp-project-stat').textContent =
-      `${fmt(d.growApp?.downloads ?? 0)} downloads · ${fmt(d.youtube?.subscribers ?? 0)} subs · ${fmt(d.youtube?.totalViews ?? 0)} views`
+      `${fmt((d.growApp?.downloads ?? 0) + 3570)} downloads · ${fmt(d.youtube?.subscribers ?? 0)} subs · ${fmt(d.youtube?.totalViews ?? 0)} views`
 
     // GrowApp expanded live stats
-    document.getElementById('ls-downloads').textContent = (d.growApp?.downloads ?? 0).toLocaleString()
+    document.getElementById('ls-downloads').textContent = ((d.growApp?.downloads ?? 0) + 3570).toLocaleString()
     document.getElementById('ls-subs').textContent = (d.youtube?.subscribers ?? 0).toLocaleString()
     document.getElementById('ls-views').textContent = (d.youtube?.totalViews ?? 0).toLocaleString()
 
